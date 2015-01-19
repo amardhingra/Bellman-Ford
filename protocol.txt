@@ -1,0 +1,11 @@
+The protocol that I have chosen to use for sending data in my UDP packets 
+has the sender send a list of all the nodes it can reach with their associated
+distances. It sends each node it can reach on a new line in the following
+format:
+
+NodeIPAddress:NodePort/Distance
+
+The first line will always contain the senders IP address and port number with
+the distance equal to cost of the direct path between them. Sending the hard wired
+distance between the two nodes allows them to dynamically change the distance
+if one of the nodes knows that the cost of the link is now lower
